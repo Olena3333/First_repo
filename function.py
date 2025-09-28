@@ -47,3 +47,14 @@ def get_fullname(first_name, last_name, middle_name=""):
         return f"{first_name} {last_name}"
     
 #########+КЛЮЧОВІ (ІМЕНОВАНІ) АРГУМЕНТИ
+def format_string(string, length):
+    if len(string) >= length:
+        return string
+    else:
+        spaces = (length - len(string)) // 2
+        return " " * spaces + string
+    #############ЗМІННА КІЛЬКІСТЬ ПАРАМЕТРІВ
+    def first(size, *args):
+        return size+len(args)
+    def second(size, **kwargs):
+        return size+len(kwargs)
