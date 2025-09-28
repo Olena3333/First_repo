@@ -31,11 +31,11 @@ age=cat.get("age")
 cat.update(info)
 print(cat)
 #parne   if
-x = int(input('Введіть число: '))
-if x % 2 == 0:
-    print("Число x є парним.")
-else:
-    print("Число x є непарним.")
+#x = int(input("Введіть число: "))
+#if x % 2 == 0:
+   # print("Число x є парним.")
+#else:
+  #  print("Число x є непарним.")
 
 
 is_next = None
@@ -63,3 +63,39 @@ elif work_experience<=5:
     developer_type = "Middle"
 else:
      developer_type = "Senior"
+     
+     
+#ЦИКЛИ WHILE
+num = int(input("Enter the integer (0 to 100): "))
+sum = 0
+while num>=0:
+    sum=sum+num
+    num=num-1
+
+#ЦИКЛИ FOR
+message = "Never argue with stupid people, they will drag you down to their level and then beat you with experience."
+search = "r"
+result = 0
+for i in message:
+    if i==search:
+        result=result+1
+        print (i)
+print(result)
+
+#МЕХАНІЗМ ОБРОБКИ ВИКЛЮЧЕНЬ
+pool = 1000
+quantity = int(input("Enter the number of mailings: "))
+try:
+    chunk = int(pool/quantity)
+except ZeroDivisionError:
+    print('Divide by zero completed!')
+
+#ВИЗНАЧЕННЯ ФУНКЦІЇ
+def greeting():
+    print("Hello world!")
+greeting()
+
+#ФУНКЦІЯ ІЗ ПАРАМЕТРАМИ
+def invite_to_event(username):
+    return f"Dear {username}, we have the honour to invite you to our event"
+print(invite_to_event("Tim"))
